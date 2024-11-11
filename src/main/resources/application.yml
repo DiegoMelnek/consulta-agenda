@@ -1,0 +1,19 @@
+server:
+  port: 8081           # Porta da aplica??o
+  servlet:
+    context-path: /api   # Prefixo para os endpoints
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/agenda_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: admin123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # Cria??o/atualiza??o autom?tica do esquema (ajuste para produ??o)
+    show-sql: true       # Exibir as queries SQL no console
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect # Dialeto apropriado para MySQL 8
+        format_sql: true                              # Formatar as queries no console
